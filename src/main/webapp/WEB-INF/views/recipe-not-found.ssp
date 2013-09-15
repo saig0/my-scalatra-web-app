@@ -1,0 +1,3 @@
+<%@ val name: String %>
+
+<h1>Rezept mit dem Namen ${name} nicht gefunden!</h1>

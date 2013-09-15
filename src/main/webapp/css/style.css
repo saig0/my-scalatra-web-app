@@ -1,0 +1,22 @@
+body
+{
+	background-color:#d0e4fe;
+}
+
+header {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+nav {
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+table {
+	border: 1px;
+}

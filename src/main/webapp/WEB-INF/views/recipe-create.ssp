@@ -1,0 +1,32 @@
+<% import de.le.app.model.Recipe %>
+<%@ import val recipe: Recipe = new Recipe("",List[String](),"") %>
+
+<h1>Neues Rezept anlegen</h1>
+<form action="/recipes" method="POST">
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>
+				<input name="name" type="text" value="${name}" />
+			</td>
+		</tr>
+		<tr>
+			<td>Zutaten</td>
+			<td>
+				<textarea name="ingredients" rows="6" cols="50">${ingredients.addString(new StringBuilder(),"\n").toString}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>Anleitung</td>
+			<td>
+				<textarea name="desc" rows="6" cols="50">${desc}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" />
+			</td>
+		</tr>
+	</table>
+</form>

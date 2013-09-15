@@ -1,0 +1,4 @@
+<% attributes("title") = "This is the custom title" %>
+<%@ var user: String %>
+
+<h1>Hi ${user}!</h1>

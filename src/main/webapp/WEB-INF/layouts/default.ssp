@@ -1,0 +1,18 @@
+<%@ var body: String %>
+<%@ var title: String = "Rezeptbuch" %>
+
+<html>
+<head>
+  <title>${title}</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+</head>
+<body>
+	<header>Rezeptbuch</header>
+	<nav>
+		<a href="/recipes?methode=read">Rezepte</a> |
+		<a href="/recipes?methode=create">Neues Rezept</a> |
+		<a href="/json-api">JSON-API</a>
+	</nav>
+  ${unescape(body)}
+</body>
+</html>

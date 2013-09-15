@@ -1,0 +1,21 @@
+1.	TypeSafe Stack installieren (sbt, conscript, giter8)
+	http://www.scalatra.org/getting-started/installation.html
+
+2.	zum Workspace wechseln
+	
+3. 	Beispiel-Projekt auschecken: g8 scalatra/scalatra-sbt
+	Erstellt Grundstruktur für eigenes Projekt
+	http://www.scalatra.org/getting-started/first-steps.html
+	
+4.	Anwendung starten: 
+		* sbt								// build & dependency management
+		* container:start					// startet Server
+		* ~ ;copy-resources;aux-compile		// compile & deploy bei jeder Änderung der Sourcen
+		
+5.	http://localhost:8080/
+		
+6.	Routing:	http://www.scalatra.org/guides/routes-and-actions.html
+	View:		http://www.scalatra.org/guides/views.html
+	Examples: 	https://github.com/scalatra/scalatra/blob/develop/example/src/main/scala/org/scalatra/TemplateExample.scala
+	Scalate:	http://scalate.fusesource.org/documentation/user-guide.html
+	Rest-API:	https://github.com/mileskin/scalatra-rest.g8/blob/master/src/main/g8/src/main/scala/spike/scalatra/RestApiServlet.scala

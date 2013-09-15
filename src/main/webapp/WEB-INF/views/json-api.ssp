@@ -1,0 +1,42 @@
+<% attributes("title") = "JSON-API Test" %>
+
+<h1>JSON-API</h1>
+ 
+<table border="1">
+	<tr>
+		<th>resource</th>
+		<th>post</th>
+		<th>get</th>
+		<th>put</th>
+		<th>delete</th>	
+	</tr>
+	<tr>
+		<td>/recipe</td>
+		<td><input id="recipes-post" type="text" value="{}" /><button onclick="restCall('recipes', 'POST', document.getElementById('recipes-post').value)">call</button></td>
+		<td><button onclick="restCall('recipes', 'GET', '')">call</button></td>
+		<td><input id="recipes-put" type="text" value="{}" /><button onclick="restCall('recipes', 'PUT', document.getElementById('recipes-put').value)">call</button></td>
+		<td><button onclick="restCall('recipes', 'DELETE', '')">call</button></td>
+	<tr>
+	<tr>
+		<td>/recipe/<input id="recipe-id" type="text" value="" /></td>
+		<td><input id="recipe-post" type="text" value="{}" /><button onclick="restCall('recipes/'+document.getElementById('recipe-id').value, 'POST', document.getElementById('recipe-post').value)">call</button></td>
+		<td><button onclick="restCall('recipes/'+document.getElementById('recipe-id').value, 'GET', '')">call</button></td>
+		<td><input id="recipe-put" type="text" value="{}" /><button onclick="restCall('recipes/'+document.getElementById('recipe-id').value, 'PUT', document.getElementById('recipe-put').value)">call</button></td>
+		<td><button onclick="restCall('recipes/'+document.getElementById('recipe-id').value, 'DELETE', '')">call</button></td>
+	</tr>
+</table> 
+
+
+<script>
+function restCall(call, type, content) {
+var url = "http://localhost:8080/api/json/" + call;
+var client = new XMLHttpRequest();
+client.open(type, url, false);
+client.setRequestHeader("Content-Type", "application/json");
+client.send(content);
+if (client.status == 200)
+    alert("The request succeeded!\n\nThe response representation was:\n\n" + client.responseText);
+else
+    alert("The request did not succeed!\n\nThe response status was: " + client.status + " " + client.statusText + ".");
+}
+</script>

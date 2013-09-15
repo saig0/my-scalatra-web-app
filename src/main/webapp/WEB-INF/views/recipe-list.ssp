@@ -1,0 +1,14 @@
+﻿<% import de.le.app.model.Recipe %>
+<%@ var recipes: Map[String,Recipe] %>
+
+<h1>Rezepte</h1>
+<table border="1">
+	#for( (key, recipe) <- recipes ) 
+	<tr>
+		<td width="150px"> ${recipe.name} </td>
+		<td> <a href=${"/recipes/" + recipe.name.replaceAll(" ","%20") + "?methode=read"}>öffnen</a> </td>
+		<td> <a href=${"/recipes/" + recipe.name.replaceAll(" ","%20")+ "?methode=update"}>bearbeiten</a> </td>
+		<td> <a href=${"/recipes/" + recipe.name.replaceAll(" ","%20")+ "?methode=delete"}>löschen</a> </td>
+	</tr>  
+	#end
+</table>

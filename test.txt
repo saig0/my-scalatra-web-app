@@ -1,0 +1,7 @@
+{
+  "Quark":{
+    "name":"Quark",
+    "ingredients":["500g Quark\r","100g Zucker\r","Schokopulver\r","Milch"],
+    "desc":"Einfach alles miteinander vermischen."
+  }
+}

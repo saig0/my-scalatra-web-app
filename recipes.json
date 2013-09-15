@@ -1,0 +1,17 @@
+{
+  "Quark":{
+    "name":"Quark",
+    "ingredients":["500g Quark\r","100g Zucker\r","50ml Milch\r","Schokopulver"],
+    "desc":"Einfach alles schön miteinander vermischen."
+  },
+  "Mia":{
+    "name":"Mia",
+    "ingredients":["Linh\r","Philipp\r","ganz viel Liebe"],
+    "desc":"einfach probieren"
+  },
+  "Quarkkäulchen":{
+    "name":"Quarkkäulchen",
+    "ingredients":["500g Quark\r","Kartoffeln"],
+    "desc":"weiß nicht mehr."
+  }
+}

@@ -1,0 +1,3 @@
+<% attributes("title") = "This is the custom title" %>
+
+<h1>Hi Scalatra!</h1>

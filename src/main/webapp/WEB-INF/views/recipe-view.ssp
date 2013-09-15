@@ -1,0 +1,19 @@
+﻿<% import de.le.app.model.Recipe %>
+<%@ import val recipe: Recipe %>
+
+<h1>Rezept: ${name}</h1>
+
+<h2>Zutaten</h2>
+<ul>
+#for ( ingredient <- ingredients)
+<li>${ingredient}</li>
+#end
+</ul>
+
+<h2>Anleitung</h2>
+<p>${desc}</p>
+
+<footer>	
+	<a href=${"/recipes/" + name.replaceAll(" ","%20") + "?methode=update"}>bearbeiten</a> |
+	<a href=${"/recipes/" + name.replaceAll(" ","%20") + "?methode=delete"}>löschen</a> 
+ </footer>
